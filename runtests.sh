@@ -1,11 +1,11 @@
 #!/bin/bash
 
 function install_deps {
-    go test -i stewie
+    GOPATH=`pwd` go test -i stewie
 }
 
 function run {
-    go test stewie
+    GOPATH=`pwd` go test stewie
 }
 
 function main {
