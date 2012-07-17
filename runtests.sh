@@ -14,7 +14,7 @@ function start_server {
 }
 
 function stop_server {
-	ps aux | grep GREP_PURPOSES | sed -n 2p | awk '{print $2}' | xargs kill -9 &> /dev/null
+	ps aux | grep GREP_PURPOSES | awk '{print $2}' | xargs kill -9 &> /dev/null
 }
 
 function clean_bin {
